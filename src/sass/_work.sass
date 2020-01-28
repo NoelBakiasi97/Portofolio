@@ -1,0 +1,28 @@
+.spans
+  cursor: pointer
+  position: relative
+  transition: 0.4s
+  bottom: 0
+  
+  &:hover
+    bottom: 5px
+    padding-bottom: 5px
+    
+
+#active
+  color: #8c7ae6
+
+.parent
+  overflow: hidden
+  margin: 0 0.6%
+  img
+    width: 300px
+    height: 200px
+    transition: ease 1s
+    filter: grayscale(100%)
+    cursor: pointer
+
+  &:hover
+    img
+      transform: scale(1.2)
+      filter: grayscale(0)
