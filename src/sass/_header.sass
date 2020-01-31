@@ -18,12 +18,20 @@ nav a
     color: black
     position: relative
     max-width: max-content
+    
 
+
+  
+a.nav-link
+
+    padding: 0 !important   
+
+    
 
 
 
 nav a:hover 
-    color: rgb(91, 204, 248) !important
+    color: #00b3fa !important
     transition: 0.3s
 
 
@@ -32,16 +40,16 @@ nav a:link
 
 #navbarSupportedContent a::before 
     content: ""
-    background-color: rgb(91, 204, 248)
+    background-color: #00b3fa
     height: 3px
     position: absolute
-    bottom: 7px
+    bottom: -1px
     width: 0
     transition: width 0.5s ease-in-out
 
 
 #navbarSupportedContent a:hover::before 
-    width: 80%
+    width: 105%
 
 #aHome
     font-size: 200%
@@ -53,7 +61,7 @@ nav a:link
 
 #aHome
     :hover
-        color: rgb(91, 204, 248)
+        color: #00b3fa
         transition: 0.3s
 
 
@@ -61,6 +69,15 @@ nav a:link
     :link
         transition: 0.5s
 
+nav
+    width: 100%
+    z-index: 5
+    transition: 2s ease
+    padding: 0
+    
+
+.nav-item
+    margin: 0 15%
 
 
 #nav 
@@ -72,8 +89,13 @@ nav a:link
     background-color:#9182dd
 
 
+
+
 #divHello
-    padding-top: 18%
+    position: absolute
+    z-index: 3
+    padding-top: 16%
+    width: 100%
     
 
 
@@ -113,11 +135,43 @@ nav a:link
     position: fixed
     bottom: 15px
     right: 15px
+    &:hover
+        transition: 0.4s ease
+        background-color: #00b3fa
+        border: 2px solid  #00b3fa
     
+
     
-.monBoutton:active
-    outline: none
+
+.non
+    visibility: hidden
+
+.oui
+    visibility: visible
     
 
 
 /* NAVBAR */ 
+
+@media ( max-width: 992px )
+    #divHello
+        h1
+            padding-top: 15%
+            font-size: 180%
+    
+
+@media ( max-width: 650px )
+    #divHello
+        h1
+            padding-top: 35%
+            font-size: 120%
+    
+   
+        
+    
+        
+    
+            
+    
+    
+

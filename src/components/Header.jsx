@@ -10,10 +10,11 @@ const Header = () => {
 
     useEffect(() => {
         window.addEventListener('scroll', () => {
-            if (window.scrollY > 480) {
+            if (window.scrollY > 65) {
                 setNav('nav')
                 setBtn('monBoutton')
-            } else {
+            }
+            else {
                 setNav('')
                 setBtn('d-none')
             }
@@ -28,61 +29,58 @@ const Header = () => {
         <div>
             <header id="header">
 
-                <nav id={nav} className="navbar navbar-expand-lg navbar-light">
+                <nav id={nav} className={nav === '' ? 'navbar navbar-expand-lg navbar-light position-absolute' : 'navbar navbar-expand-lg navbar-light'}>
 
-                    <div className="col-5 ">
-                        <a className="navbar-brand d-block mx-auto" id="aHome" href="#header">Home.</a>
-                        <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                            <span className="navbar-toggler-icon"></span>
-                        </button>
+                    <div className=" col-sm-5 col-md-12 col-lg-5 d-flex p-0">
+                        <div>
+                            <button className="navbar-toggler mt-1" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                                <span className="navbar-toggler-icon"></span>
+                            </button>
+                        </div>
+                        <div className="mx-auto">
+                            <a className="navbar-brand" id="aHome" href="#header">Home</a>
+                        </div>
                     </div>
 
-                    <div className="collapse navbar-collapse col-7 row" id="navbarSupportedContent">
+                    <div className="collapse navbar-collapse  col-sm-7 col-md-12 col-lg-7 row" id="navbarSupportedContent">
                         <ul className="navbar-nav" id="ulNav">
-                            <li className="nav-item mx-4">
-                                <a className="nav-link" href="#">About</a>
+                            <li className="nav-item ">
+                                <a className="nav-link" href="#sec-about">About</a>
                             </li>
-                            <li className="nav-item mx-4">
-                                <a className="nav-link" href="#">Work</a>
+                            <li className="nav-item ">
+                                <a className="nav-link" href="#work">Work</a>
                             </li>
-                            <li className="nav-item mx-4">
-                                <a className="nav-link" href="#">Pricing</a>
+                            <li className="nav-item ">
+                                <a className="nav-link" href="#pricing">Pricing</a>
                             </li>
-                            <li className="nav-item mx-4">
-                                <a className="nav-link" href="#">Blog</a>
+                            <li className="nav-item ">
+                                <a className="nav-link" href="#blog">Blog</a>
                             </li>
-                            <li className="nav-item mx-4">
-                                <a className="nav-link" href="#">Contact</a>
+                            <li className="nav-item ">
+                                <a className="nav-link" href="#contact">Contact</a>
                             </li>
                         </ul>
                     </div>
 
+
                 </nav>
                 <div>
-                    {/* <div className="text-center" id="divHello">
+                    <div className="text-center" id="divHello">
                         <h1>Hello! My name is Noel Bakiasi and I'm a full stack developer.</h1>
-                    </div> */}
+                    </div>
 
-                    <div id="carouselExampleFade" class="carousel slide carousel-fade" data-ride="carousel">
-                        <div class="carousel-inner">
-                            <div class="carousel-item active">
-                                <img src={image1} class="d-block w-100" alt="..." />
+                    <div id="carouselExampleFade" className="carousel slide carousel-fade" data-ride="carousel">
+                        <div className="carousel-inner">
+                            <div className="carousel-item active">
+                                <img src={image1} className="d-block w-100" alt="..." />
                             </div>
-                            <div class="carousel-item">
-                                <img src={image2} class="d-block w-100" alt="..." />
+                            <div className="carousel-item">
+                                <img src={image2} className="d-block w-100" alt="..." />
                             </div>
-                            <div class="carousel-item">
-                                <img src={image3} class="d-block w-100" alt="..." />
+                            <div className="carousel-item">
+                                <img src={image3} className="d-block w-100" alt="..." />
                             </div>
                         </div>
-                        <a class="carousel-control-prev" href="#carouselExampleFade" role="button" data-slide="prev">
-                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                            <span class="sr-only">Previous</span>
-                        </a>
-                        <a class="carousel-control-next" href="#carouselExampleFade" role="button" data-slide="next">
-                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                            <span class="sr-only">Next</span>
-                        </a>
                     </div>
                 </div>
                 <button onClick={click} className={btn}><i className="fas fa-chevron-up text-white"></i></button>
@@ -92,9 +90,6 @@ const Header = () => {
     )
 }
 
-{/* <div className="col-6 text-right">
-    <a href="https://www.linkedin.com/in/bakiasi-noel-9049091a0/"><i className="fab fa-linkedin-in"></i></a>
-    <a href="https://www.instagram.com/noelbakiasi/"><i className="fab fa-instagram"></i></a>
-</div> */}
+
 
 export default Header

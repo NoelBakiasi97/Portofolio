@@ -3,6 +3,9 @@ import Header from './components/Header'
 import About from './components/About'
 import Work from './components/Work'
 import Pricing from './components/Pricing'
+import Blog from './components/Blog'
+import Contact from './components/Contact'
+import Footer from './components/Footer'
 
 function App() {
 
@@ -14,6 +17,9 @@ function App() {
       <About />
       <Work />
       <Pricing />
+      <Blog />
+      <Contact />
+      <Footer />
     </div>
   );
 }
