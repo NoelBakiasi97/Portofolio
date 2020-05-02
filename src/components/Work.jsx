@@ -42,6 +42,7 @@ const Work = () => {
         setActive2("")
         setActive3("active")
     }
+    //Lundi 10 enlever toutes les d-none et le remplacer condition de Rendu
     useEffect(()=>{
         window.addEventListener('scroll', () => {
             if (window.scrollY > 750) {

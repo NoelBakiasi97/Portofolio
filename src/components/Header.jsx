@@ -60,8 +60,7 @@ const Header = () => {
                                 <a className="nav-link" href="#contact">Contact</a>
                             </li>
                         </ul>
-                    </div>
-
+                    </div>  
 
                 </nav>
                 <div>
